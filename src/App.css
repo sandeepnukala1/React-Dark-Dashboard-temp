@@ -1,38 +1,117 @@
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  background-color: #001B3A;
+  color: #f1f1f1;
+}
+
 .App {
+  display: flex;
+  height: 100%;
+}
+
+.sidebar {
+  background-color: #00224B;
+  margin: 50px 16px 75px;
+}
+
+.content {
+  margin: 50px 25px 75px;
+}
+
+.sidebar a {
+  color: #f1f1f1;
+  padding: 25px;
+  text-decoration: none;
+}
+
+.pad-top-bottom {
+  display: flex;
+  flex-direction: column;
+  padding: 150px 50px;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+}
+
+.column1 {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1200px;
+}
+
+.column1 > * {
+  flex-grow: 1;
+  width: 30%;
+  height: 300px;
+}
+
+.card {
+  background-color: #00224B;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-title {
+  padding: 10px;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.card-child-content {
+  padding: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.big-card {
+  background-color: #00224B;
+  margin-right: 20px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 420px;
 }
 
-.App-link {
-  color: #61dafb;
+.card-sub-content {
+  margin: 50px;
+  background: grey;
+  height: 200px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media only screen and (min-width: 1300px) {
+  .column1 {
+    width: 1000px;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media only screen and (min-width: 1400px) {
+  .column1 {
+    width: 1200px;
+  }
+}
+
+@media only screen and (min-width: 1500px) {
+  .column1 {
+    width: 1300px;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .column1 {
+    width: 1400px;
+  }
+  .column1 > * {
+    height: 400px;
+  }
+  .big-card {
+    height: 500px;
   }
 }
